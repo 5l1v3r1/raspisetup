@@ -40,12 +40,15 @@ cd re4son-kernel-builder
 
 nano /lib/systemd/system/bluetooth.service
 
-Bul -> Değiştir
+\# Bul -> Değiştir
 
 ```
 ExecStart=/usr/libexec/bluetooth/bluetoothd -C
 ```
+rfcomm watch hci0 1 getty rfcomm0 115200 vt100 -a root
 
+[ ] Servis dosyası eklenecek
+ 
 ###### # Scriptleri İndirme
 
 wget wifi.sh
@@ -57,16 +60,3 @@ mv motdpi > /etc
 echo > /etc/motd
 
 rc.locale motdpi'yi ekle
-
-
-
-
-bluetoothctl
-agent on
-scan on
-
-bluetoothctl scan on
-
- rfcomm watch hci0 1 getty rfcomm0 115200 vt100 -a root
-
-
