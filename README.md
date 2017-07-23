@@ -14,4 +14,5 @@ nano /etc/network/interfaces
 allow-hotplug wlan0
 iface wlan0 inet dhcp
 wpa-conf /etc/wpa_supplicant.conf
+
 ---Bitti
