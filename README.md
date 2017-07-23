@@ -17,15 +17,11 @@ iface wlan0 inet dhcp
 wpa-conf /etc/wpa_supplicant.conf
 ```
 
-shutdown dhc
-dhclient -r
-#shutdown wpa_supplicant
-killall wpa_supplicant
-#down interface
-ifdown --force wlan0
-sleep 1
-#your wpa startup here:
-wpa_supplicant -t -fYOUR_LOG_FILE -cYOUR_wpa_supplicant.conf -B -iwlan0
-sleep 1
-#restart dhc
-dhclient -nw
+wget wifi.sh
+wget motdpi
+mv motdpi > /etc
+
+echo > /etc/motd
+
+rc.locale motdpi'yi ekle
+
