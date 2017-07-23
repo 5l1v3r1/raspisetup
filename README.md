@@ -22,7 +22,9 @@ wpa-conf /etc/wpa_supplicant.conf
 ```
 
 wget wifi.sh
+
 wget motdpi
+
 mv motdpi > /etc
 
 echo > /etc/motd
