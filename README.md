@@ -10,9 +10,9 @@ apt-get -y install gparted tightvncserver ifplugd
 
 nano /etc/network/interfaces
 
-===Altına Ekle
+Altına Ekle
+```
 allow-hotplug wlan0
 iface wlan0 inet dhcp
 wpa-conf /etc/wpa_supplicant.conf
-
----Bitti
+```
