@@ -51,6 +51,12 @@ rfcomm watch hci0 1 getty rfcomm0 115200 vt100 -a root
 
 ###### # MOTD Değiştirme
 
+echo > /etc/motd
+
+
+
+
+
 nano /etc/ssh/sshd_config
 
 /#Bul -> Değiştir
@@ -61,9 +67,9 @@ PrintLastLog no
 
 wget motdpi
 
-mv motdpi > /etc
+mv motdpi > /etc/motdpi
 
-echo > /etc/motd
+
 
 rc.locale motdpi'yi ekle
  
