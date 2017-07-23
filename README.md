@@ -48,10 +48,16 @@ ExecStart=/usr/libexec/bluetooth/bluetoothd -C
 rfcomm watch hci0 1 getty rfcomm0 115200 vt100 -a root
 
 [ ] Servis dosyası eklenecek
- 
-###### # Scriptleri İndirme
 
-wget wifi.sh
+###### # MOTD Değiştirme
+
+nano /etc/ssh/sshd_config
+
+/#Bul -> Değiştir
+
+```
+PrintLastLog no
+```
 
 wget motdpi
 
@@ -60,3 +66,9 @@ mv motdpi > /etc
 echo > /etc/motd
 
 rc.locale motdpi'yi ekle
+ 
+###### # Scriptleri İndirme
+
+wget wifi.sh
+
+
