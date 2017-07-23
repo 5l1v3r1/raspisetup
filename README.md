@@ -12,11 +12,11 @@ apt-get -y upgrade
 
 apt-get -y install gparted tightvncserver ifplugd
 
-###### # NC ile bağlanıp diski genişlet
+#### # NC ile bağlanıp diski genişlet
 
 vncserver :1
 
-##### # Ethernet Kablosuz Wifi Bağlantısı İçin
+#### # Ethernet Kablosuz Wifi Bağlantısı İçin
 
 nano /etc/network/interfaces
 
@@ -28,7 +28,7 @@ iface wlan0 inet dhcp
 wpa-conf /etc/wpa_supplicant.conf
 ```
 
-###### # Bluetooth Çalıştırmak İçin
+#### # Bluetooth Çalıştırmak İçin
 
 git clone https://github.com/Re4son/re4son-kernel-builder.git
 
@@ -36,7 +36,7 @@ cd re4son-kernel-builder
 
 ./install.sh
 
-###### # Bluetooth Üzerinden SSH Bağlantısı İçin
+#### # Bluetooth Üzerinden SSH Bağlantısı İçin
 
 nano /lib/systemd/system/bluetooth.service
 
@@ -49,7 +49,7 @@ rfcomm watch hci0 1 getty rfcomm0 115200 vt100 -a root
 
 [ ] Servis dosyası eklenecek
 
-###### # MOTD Değiştirme
+#### # MOTD Değiştirme
 
 echo > /etc/motd
 
