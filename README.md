@@ -1,7 +1,7 @@
 # raspi
 Raspberry Pi3
 
-# komutlar
+# Kurulum
 apt-get update
 
 apt-get -y install screen
@@ -12,9 +12,11 @@ apt-get -y upgrade
 
 apt-get -y install gparted tightvncserver ifplugd
 
-- VNC ile bağlanıp diski genişlet
+###### # NC ile bağlanıp diski genişlet
 
 vncserver :1
+
+##### # Ethernet Kablosuz Wifi Bağlantısı İçin
 
 nano /etc/network/interfaces
 
@@ -26,6 +28,16 @@ iface wlan0 inet dhcp
 wpa-conf /etc/wpa_supplicant.conf
 ```
 
+###### # Bluetooth Çalıştırmak İçin
+
+git clone https://github.com/Re4son/re4son-kernel-builder.git
+
+cd re4son-kernel-builder
+
+./install.sh
+
+###### # Bluetooth Üzerinden SSH Bağlantısı İçin
+
 nano /lib/systemd/system/bluetooth.service
 
 Bul -> Değiştir
@@ -33,6 +45,8 @@ Bul -> Değiştir
 ```
 ExecStart=/usr/libexec/bluetooth/bluetoothd -C
 ```
+
+###### # Scriptleri İndirme
 
 wget wifi.sh
 
@@ -44,11 +58,6 @@ echo > /etc/motd
 
 rc.locale motdpi'yi ekle
 
-git clone https://github.com/Re4son/re4son-kernel-builder.git
-
-cd re4son-kernel-builder
-
-./install.sh
 
 
 
