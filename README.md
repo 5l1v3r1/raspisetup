@@ -27,7 +27,7 @@ nano /lib/systemd/system/bluetooth.service
 Bul -> Değiştir
 
 ```
-ExecStart=/usr/libexec/bluetooth/bluetoothd **-C**
+ExecStart=/usr/libexec/bluetooth/bluetoothd -C
 ```
 
 wget wifi.sh
