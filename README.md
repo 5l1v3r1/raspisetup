@@ -10,6 +10,8 @@ screen
 
 apt-get -y upgrade
 
+systemctl stop network-manager && systemctl disable network-manager
+
 apt-get -y install gparted tightvncserver ifplugd
 
 #### # NC ile bağlanıp diski genişlet
