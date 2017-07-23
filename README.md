@@ -12,6 +12,10 @@ apt-get -y upgrade
 
 apt-get -y install gparted tightvncserver ifplugd
 
+- VNC ile bağlanıp diski genişlet
+
+vncserver :1
+
 nano /etc/network/interfaces
 
 Altına Ekle
@@ -46,10 +50,14 @@ cd re4son-kernel-builder
 
 ./install.sh
 
-n
 
-y
 
-y
+bluetoothctl
+agent on
+scan on
+
+bluetoothctl scan on
+
+ rfcomm watch hci0 1 getty rfcomm0 115200 vt100 -a root
 
 
