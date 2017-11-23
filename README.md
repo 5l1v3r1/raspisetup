@@ -1,5 +1,5 @@
 # raspi
-Raspberry Pi3
+Raspberry Pi3 için ilk kurulumu hızlandırma scripti.
 
 # Kurulum
 
@@ -8,7 +8,7 @@ Raspberry Pi3
     dpkg -i raspi-config_20121028_all.deb 
     raspi-config --expand-rootfs
 
-Expand the file system
-::
+Expand the file system, then run setup.sh
+
     ./setup.sh
 
