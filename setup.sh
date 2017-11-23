@@ -1,9 +1,8 @@
 #---Henüz Tamamlanmadı---
 
-apt-get update
 apt-get -y install screen
 screen
-apt-get -y upgrade
+
 systemctl stop network-manager && systemctl disable network-manager
 apt-get -y install gparted tightvncserver ifplugd
 #vncserver :1
@@ -44,4 +43,6 @@ mv motdpi > /etc/motdpi
 echo "bash /etc/motdpi" /etc/profile
 
 # Programları Yükleme
+apt-get -y upgrade
+apt-get update
 apt-get -y install mitmf
