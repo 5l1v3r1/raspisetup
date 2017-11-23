@@ -1,7 +1,4 @@
 #---Henüz Tamamlanmadı---
-dpkg -i raspi-config_20121028_all.deb 
-raspi-config --expand-rootfs
-
 apt-get -y install screen
 screen -dmS guncelleme
 screen -S murat -X stuff "apt-get -y install gparted tightvncserver ifplugd \napt-get -y update \napt-get -y upgrade \napt-get -y install mitmf \n"
