@@ -10,4 +10,9 @@ echo "$(tput setaf 2)
   (  : '~' :  ) $(tput sgr0)Raspberry Pi$(tput setaf 1)
    '~ .~~~. ~'
        '~'
-$(tput sgr0)"
+$(tput sgr0)
+
+Komutlar
+--------
+vncserver -> service vncserver start|stop
+wifi -> ./wifi.sh \"Network Name\" \"password\""
