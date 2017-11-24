@@ -1,7 +1,7 @@
 #---Henüz Tamamlanmadı---
 apt-get -y install screen
 screen -dmS guncelleme
-screen -S murat -X stuff "apt-get -y install gparted tightvncserver ifplugd \napt-get -y update \napt-get -y upgrade \napt-get -y install mitmf \n"
+screen -S guncelleme -X stuff "apt-get -y install gparted tightvncserver ifplugd \napt-get -y update \napt-get -y upgrade \napt-get -y install mitmf \n"
 
 systemctl stop network-manager && systemctl disable network-manager
 #vncserver :1
@@ -30,6 +30,7 @@ nano /lib/systemd/system/bluetooth.service
 #Servisler
 cp bluetooth.service /etc/systemd/system/bluetooth.service
 cp rfcomm.service /etc/systemd/system/rfcomm.service
+cp vncserver.service /etc/systemd/system/vncserver.service
 
 # MOTD Değiştirme
 sed -i "s/PrintLastLog yes/PrintLastLog no/g" /etc/ssh/sshd_config
