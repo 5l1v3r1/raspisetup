@@ -1,7 +1,8 @@
-# raspi
-Raspberry Pi3 için ilk kurulumu hızlandırma scripti.
+# raspisetup
+TR: Raspberry Pi3 için ilk kurulum işlemlerini hızlandırma scripti.
+EN: Configuration script for speed things up on my own Raspberry Pi3 at first install.
 
-# Kurulum
+# Installation
 
     git clone https://github.com/muratcesmecioglu/raspisetup.git
     cd raspisetup
@@ -11,4 +12,3 @@ Raspberry Pi3 için ilk kurulumu hızlandırma scripti.
 Expand the file system, then run setup.sh
 
     ./setup.sh
-
