@@ -12,9 +12,9 @@ echo "iface wlan0 inet dhcp" >> /etc/network/interfaces
 echo "wpa-conf /etc/wpa_supplicant.conf" >> /etc/network/interfaces
 
 # Bluetooth Çalıştırmak İçin
-git clone https://github.com/Re4son/re4son-kernel-builder.git
-cd re4son-kernel-builder
-./install.sh
+#git clone https://github.com/Re4son/re4son-kernel-builder.git
+#cd re4son-kernel-builder
+#./install.sh
 
 # Bluetooth Üzerinden SSH Bağlantısı İçin
 nano /lib/systemd/system/bluetooth.service
