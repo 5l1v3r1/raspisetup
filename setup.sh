@@ -1,7 +1,10 @@
 #---Henüz Tamamlanmadı---
 apt-get -y install screen
 screen -dmS guncelleme
-screen -S guncelleme -X stuff "apt-get -y install gparted tightvncserver ifplugd \napt-get -y update \napt-get -y upgrade \napt-get -y install mitmf \n"
+screen -S guncelleme -X stuff "apt-get -y install gparted tightvncserver \napt-get -y install mitmf \n"
+# 2017.3 versiyonunda ifplugd programına gerek yok sanırım??
+# en baştan update ve upgrade yapmaya gerek yok gibi??
+
 
 systemctl stop network-manager && systemctl disable network-manager
 #vncserver :1
