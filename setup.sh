@@ -41,3 +41,7 @@ echo > /etc/motd
 wget motdpi
 mv motdpi > /etc/motdpi
 echo "bash /etc/motdpi" /etc/profile
+
+#---------------
+# fdisk -l /dev/mmcblk0 | grep "Disk /dev/mmcblk0" | cut -d" " -f7
+
