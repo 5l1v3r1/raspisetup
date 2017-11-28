@@ -46,8 +46,10 @@ echo "bash /etc/motdpi" >> /etc/profile
 # scriptleri ayarlar
 cp wifi /usr/bin/wifi
 cp wifioff /usr/bin/wifi
+cp yardim /usr/bin/yardim
 chmod +x /usr/bin/wifi
 chmod +x /usr/bin/wifioff
+chmod +x /usr/bin/yardim
 
 #Masaustunu kapatma
 systemctl disable ligthdm
