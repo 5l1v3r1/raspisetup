@@ -1,6 +1,5 @@
 #!/bin/sh
 #---Henüz Tamamlanmadı---
-ILKCALISMA=0
 #screen -dmS guncelleme
 #screen -S guncelleme -X stuff "apt-get -y install gparted tightvncserver \n"
 apt-get -y install screen gparted tightvncserver
