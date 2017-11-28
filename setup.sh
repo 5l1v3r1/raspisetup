@@ -44,6 +44,9 @@ echo > /etc/motd
 mv motdpi > /etc/motdpi
 echo "bash /etc/motdpi" >> /etc/profile
 
+#Masaustunu kapatma
+systemctl disable ligthdm
+
 #---------------
 # fdisk -l /dev/mmcblk0 | grep "Disk /dev/mmcblk0" | cut -d" " -f7
 
