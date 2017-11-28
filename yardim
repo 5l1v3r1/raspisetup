@@ -1,0 +1,12 @@
+#!/bin/bash
+echo "$(tput sgr 0 1)$(tput bold)$(tput setaf 3)Komutlar$(tput sgr0)
+$(tput setaf 3)
+Wifi ile baglanti       -> wifi "Ag İsmi" "Sifre"
+Wifi agdan cikma        -> wifioff
+VNC Calistirma          -> service vncserver start|stop
+  Acilista VNC baslatma -> systemctl enable|disable vncserver
+
+$(tput sgr 0 1)$(tput bold)$(tput setaf 2)Hacking$(tput sgr0)
+$(tput setaf 2)
+mitmf.py...
+$(tput sgr0)"
