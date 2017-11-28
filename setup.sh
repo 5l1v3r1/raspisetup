@@ -44,8 +44,18 @@ echo > /etc/motd
 mv motdpi > /etc/motdpi
 echo "bash /etc/motdpi" >> /etc/profile
 
+# scriptleri ayarlar
+cp wifi /usr/bin/wifi
+cp wifioff /usr/bin/wifi
+chmod +x /usr/bin/wifi
+chmod +x /usr/bin/wifioff
+
 #Masaustunu kapatma
 systemctl disable ligthdm
+
+screen -dmS guncelleme
+screen -S guncelleme -X stuff "apt-get -y update \napt-get -y upgrade \n"
+read -p "Arkaplanda guncelleme yapiliyor"
 
 #---------------
 # fdisk -l /dev/mmcblk0 | grep "Disk /dev/mmcblk0" | cut -d" " -f7
