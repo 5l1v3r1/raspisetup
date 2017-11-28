@@ -1,13 +1,16 @@
+#!/bin/sh
 #---Henüz Tamamlanmadı---
-apt-get -y install screen
-screen -dmS guncelleme
-screen -S guncelleme -X stuff "apt-get -y install gparted tightvncserver \napt-get -y install mitmf \n"
-# 2017.3 versiyonunda ifplugd programına gerek yok sanırım??
-# en baştan update ve upgrade yapmaya gerek yok gibi??
+ILKCALISMA=0
+#screen -dmS guncelleme
+#screen -S guncelleme -X stuff "apt-get -y install gparted tightvncserver \n"
+apt-get -y install screen gparted tightvncserver
 
+#systemctl stop network-manager && systemctl disable network-manager
 
-systemctl stop network-manager && systemctl disable network-manager
-#vncserver :1
+echo "VNC Server şifresini ayarla, masaustune baglan, diski genislet"
+vncserver :1
+read -p "Devam etmek icin bir tusa basin"
+
 
 #nano /etc/network/interfaces
 echo "allow-hotplug wlan0" >> /etc/network/interfaces
@@ -20,7 +23,7 @@ echo "wpa-conf /etc/wpa_supplicant.conf" >> /etc/network/interfaces
 #./install.sh
 
 # Bluetooth Üzerinden SSH Bağlantısı İçin
-nano /lib/systemd/system/bluetooth.service
+#nano /lib/systemd/system/bluetooth.service
 # Bul -> Değiştir
 # ExecStart=/usr/libexec/bluetooth/bluetoothd -C
 
@@ -31,16 +34,15 @@ nano /lib/systemd/system/bluetooth.service
 #rfcomm watch hci0 1 getty rfcomm0 115200 vt100 -a root
 
 #Servisler
-cp bluetooth.service /etc/systemd/system/bluetooth.service
-cp rfcomm.service /etc/systemd/system/rfcomm.service
-cp vncserver.service /etc/systemd/system/vncserver.service
+#cp bluetooth.service /etc/systemd/system/bluetooth.service
+#cp rfcomm.service /etc/systemd/system/rfcomm.service
+#cp vncserver.service /etc/systemd/system/vncserver.service
 
 # MOTD Değiştirme
 sed -i "s/PrintLastLog yes/PrintLastLog no/g" /etc/ssh/sshd_config
 echo > /etc/motd
-wget motdpi
 mv motdpi > /etc/motdpi
-echo "bash /etc/motdpi" /etc/profile
+echo "bash /etc/motdpi" >> /etc/profile
 
 #---------------
 # fdisk -l /dev/mmcblk0 | grep "Disk /dev/mmcblk0" | cut -d" " -f7
