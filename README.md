@@ -1,3 +1,5 @@
+# --- Bu proje henüz deneme aşamasındadır! ---
+
 # raspisetup
 TR: Raspberry Pi3 için ilk kurulum işlemlerini hızlandırma scripti.
 
