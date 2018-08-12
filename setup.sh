@@ -40,7 +40,7 @@ echo "wpa-conf /etc/wpa_supplicant.conf" >> /etc/network/interfaces
 # MOTD Değiştirme
 sed -i "s/PrintLastLog yes/PrintLastLog no/g" /etc/ssh/sshd_config
 echo > /etc/motd
-mv motdpi > /etc/motdpi
+mv motdpi /etc/motdpi
 echo "bash /etc/motdpi" >> /etc/profile
 
 # scriptleri ayarlar
