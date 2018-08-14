@@ -1,5 +1,5 @@
 [Unit]
-Description=RFCOMM service
+Description=BTSerial service
 After=bluetooth.service
 Requires=bluetooth.service
 
