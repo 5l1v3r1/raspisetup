@@ -14,7 +14,7 @@
 #
 
 # Get the starting offset of the root partition
-PART_START=$(parted /dev/mmcblk0 -ms unit s p | grep "^2" | cut -f 2 -d:)
+PART_START=$(parted /dev/mmcblk0 -ms unit s p | grep "^2" | cut -f 2 -d: | sed 's/.$//')
 [ "$PART_START" ] || return 1
 # Return value will likely be error for fdisk as it fails to reload the
 # partition table because the root fs is mounted
@@ -26,6 +26,8 @@ n
 p
 2
 $PART_START
+
+n
 p
 w
 EOF
@@ -59,4 +61,7 @@ esac
 EOF
 chmod +x /etc/init.d/resize2fs_once &&
 update-rc.d resize2fs_once defaults &&
-  echo "Root partition has been resized. The filesystem will be enlarged upon the next reboot"
+echo "Bolum genisletildi. Sistemi yeniden baslatin."
+
+read -p "Yeniden baslatmak icin bir tusa basin"
+reboot
