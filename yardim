@@ -5,6 +5,7 @@ Wifi ile baglanti       -> wifi \"Ag Ismi\" \"Sifre\"
 Wifi agdan cikma        -> wifioff
 VNC Calistirma          -> service vncserver start|stop
   Acilista VNC baslatma -> systemctl enable|disable vncserver
+Masaustu Acma Kapama    -> systemctl enable|disable ligthdm
 
 $(tput sgr 0 1)$(tput bold)$(tput setaf 2)Hacking$(tput sgr0)
 $(tput setaf 2)
