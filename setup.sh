@@ -2,16 +2,21 @@
 #---Henüz Tamamlanmadı---
 #screen -dmS guncelleme
 #screen -S guncelleme -X stuff "apt-get -y install gparted tightvncserver \n"
+#gparted gerekmeyebilir, parted ile yapilabiliyor. expand betigini guncelle
 apt-get -y install screen gparted tightvncserver
 
 #systemctl stop network-manager && systemctl disable network-manager
 
-echo "VNC Server şifresini ayarla, masaustune baglan, diski genislet"
-vncserver :1
+#VNC şifresini ayarlar
+vncpasswd -f <<< "123456" > /root/.vnc/passwd 
+
+
+echo "VNC Server şifresi ayarlandi, masaustune baglan, diski genislet"
+
 read -p "Devam etmek icin bir tusa basin"
 
 
-#nano /etc/network/interfaces
+#Bu bölüm başlangıçta otomatik wifi ağına bağlanmayı sağlıyor
 echo "allow-hotplug wlan0" >> /etc/network/interfaces
 echo "iface wlan0 inet dhcp" >> /etc/network/interfaces
 echo "wpa-conf /etc/wpa_supplicant.conf" >> /etc/network/interfaces
@@ -45,7 +50,7 @@ echo "bash /etc/motdpi" >> /etc/profile
 
 # scriptleri ayarlar
 cp wifi /usr/bin/wifi
-cp wifioff /usr/bin/wifi
+cp wifioff /usr/bin/wifioff
 cp yardim /usr/bin/yardim
 chmod +x /usr/bin/wifi
 chmod +x /usr/bin/wifioff
