@@ -12,9 +12,10 @@ echo "Programlar yuklendi"
 read -p "Devam etmek icin bir tusa basin"
 
 #VNC şifresini ayarlar
-mkdir /root/.vnc/
-touch /root/.vnc/passwd
-vncpasswd -f <<< "123456" > /root/.vnc/passwd
+#mkdir /root/.vnc/
+#touch /root/.vnc/passwd
+#vncpasswd -f <<< "123456" > /root/.vnc/passwd
+cp passwd /root/.vnc/passwd
 echo "-------------------------------------"
 echo "VNC Server sifresi ayarlandi: 123456"
 read -p "Devam etmek icin bir tusa basin"
