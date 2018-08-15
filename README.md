@@ -9,9 +9,6 @@ EN: Configuration script for speed things up on my own Raspberry Pi3 at first in
 
     git clone https://github.com/muratcesmecioglu/raspisetup.git
     cd raspisetup
-    dpkg -i raspi-config_20121028_all.deb 
-    raspi-config --expand-rootfs
-
-Expand the file system, then run setup.sh
-
+    ./expand-rootfs.sh
+    reboot
     ./setup.sh
