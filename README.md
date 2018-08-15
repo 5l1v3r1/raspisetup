@@ -10,6 +10,7 @@ EN: Configuration script for speed things up on my own Raspberry Pi3 at first in
     git clone https://github.com/muratcesmecioglu/raspisetup.git
     cd raspisetup
     chmod +x expand-rootfs.sh
+    chmod +x setup.sh
     ./expand-rootfs.sh
     reboot
     ./setup.sh
