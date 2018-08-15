@@ -12,3 +12,6 @@ EN: Configuration script for speed things up on my own Raspberry Pi3 at first in
     ./expand-rootfs.sh
     reboot
     ./setup.sh
+
+# DNS Ekleme
+    /etc/dhcp/dhclient.conf
