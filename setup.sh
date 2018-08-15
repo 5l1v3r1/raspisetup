@@ -8,7 +8,9 @@ apt-get -y install screen tightvncserver
 #systemctl stop network-manager && systemctl disable network-manager
 
 #VNC şifresini ayarlar
-vncpasswd -f <<< "123456" > /root/.vnc/passwd 
+mkdir /root/.vnc/
+touch /root/.vnc/passwd
+vncpasswd -f <<< "123456" > /root/.vnc/passwd
 echo "VNC Server şifresi ayarlandi: 123456"
 read -p "Devam etmek icin bir tusa basin"
 
