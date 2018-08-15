@@ -2,7 +2,7 @@
 #---Henüz Tamamlanmadı---
 #screen -dmS guncelleme
 #screen -S guncelleme -X stuff "apt-get -y install gparted tightvncserver \n"
-#gparted gerekmeyebilir, parted ile yapilabiliyor. expand betigini guncelle
+apt-get update
 apt-get -y install screen tightvncserver
 
 #systemctl stop network-manager && systemctl disable network-manager
