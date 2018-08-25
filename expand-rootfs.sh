@@ -53,5 +53,5 @@ esac
 EOF
 chmod +x /etc/init.d/resize2fs_once &&
 update-rc.d resize2fs_once defaults &&
-echo "Bolum genisletildi. Sistemi yeniden baslatiliyor." &&
+read -p "Bolum genisletildi. Sistemi yeniden baslatmak icin bir tusa basin..." &&
 reboot
