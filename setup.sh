@@ -1,5 +1,5 @@
 #!/bin/bash
-#---Henüz Tamamlanmadı---
+#---Henüz Tamamlanmadi---
 #screen -dmS guncelleme
 #screen -S guncelleme -X stuff "apt-get -y install gparted tightvncserver \n"
 echo "-------------------------------------"
@@ -21,7 +21,7 @@ echo "VNC Server sifresi ayarlandi: 123456"
 read -p "Devam etmek icin bir tusa basin"
 
 
-#Bu bölüm başlangıçta otomatik wifi ağına bağlanmayı sağlıyor
+#Bu bolum baslangicta otomatik wifi agina baglanmayi sagliyor
 echo "allow-hotplug wlan0" >> /etc/network/interfaces
 echo "iface wlan0 inet dhcp" >> /etc/network/interfaces
 echo "wpa-conf /etc/wpa_supplicant.conf" >> /etc/network/interfaces
@@ -32,20 +32,20 @@ read -p "Devam etmek icin bir tusa basin"
 
 
 
-
-# Bluetooth Çalıştırmak İçin
+#------------------------------------------
+# Bluetooth Calistirmak Icin
 #git clone https://github.com/Re4son/re4son-kernel-builder.git
 #cd re4son-kernel-builder
 #./install.sh
 
-# Bluetooth Üzerinden SSH Bağlantısı İçin
+# Bluetooth Uzerinden SSH Baglantisi Icin
 #nano /lib/systemd/system/bluetooth.service
 # Bul -> Değiştir
 # ExecStart=/usr/libexec/bluetooth/bluetoothd -C
 
 #### Deneme yap:
 # sed -i 's/original/new/g' /lib/systemd/system/bluetooth.service
-
+#-----------------------------------------------
 
 
 #Servisleri yukle
@@ -57,7 +57,7 @@ echo "Servis ayar dosyalari yuklendi"
 read -p "Devam etmek icin bir tusa basin"
 
 
-# MOTD Değiştirme
+# MOTD Degistirme
 sed -i "s/PrintLastLog yes/PrintLastLog no/g" /etc/ssh/sshd_config
 echo > /etc/motd
 mv motdpi /etc/motdpi
@@ -66,7 +66,7 @@ echo "-------------------------------------"
 echo "MOTD guncellendi"
 read -p "Devam etmek icin bir tusa basin"
 
-# scriptleri ayarlar
+# scriptleri ayarlaa
 cp wifi /usr/bin/wifi
 cp wifioff /usr/bin/wifioff
 cp yardim /usr/bin/yardim
