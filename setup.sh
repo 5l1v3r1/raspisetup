@@ -83,10 +83,14 @@ echo "-------------------------------------"
 echo "Servis ayarlari yapildi"
 read -p "Devam etmek icin bir tusa basin"
 
-screen -dmS guncelleme
-screen -S guncelleme -X stuff "apt-get -y update \napt-get -y upgrade \n"
-echo "-------------------------------------"
-echo "Arkaplanda guncelleme yapiliyor"
-read -p "Devam etmek icin bir tusa basin"
+read -p "Arkaplanda guncelleme yapilsin mi? [E/h]" CEVAP
+if [[ "$CEVAP" == "E" || "$CEVAP" == "e" || "$CEVAP" == "" ]]; then
+        screen -dmS guncelleme
+        screen -S guncelleme -X stuff "apt-get -y update \napt-get -y upgrade \n"
+        echo "-------------------------------------"
+        echo "Arkaplanda guncelleme yapiliyor"
+        read -p "Devam etmek icin bir tusa basin"
+fi
+
 
 yardim
