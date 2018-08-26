@@ -1,5 +1,5 @@
 #!/bin/bash
-#---Henüz Tamamlanmadi---
+#---Henuz Tamamlanmadi---
 #screen -dmS guncelleme
 #screen -S guncelleme -X stuff "apt-get -y install gparted tightvncserver \n"
 echo "-------------------------------------"
@@ -11,8 +11,8 @@ echo "-------------------------------------"
 echo "Programlar yuklendi"
 read -p "Devam etmek icin bir tusa basin"
 
-#VNC şifresini ayarlar
-#mkdir /root/.vnc/
+#VNC sifresini ayarlar
+mkdir /root/.vnc/
 #touch /root/.vnc/passwd
 #vncpasswd -f <<< "123456" > /root/.vnc/passwd
 cp passwd /root/.vnc/passwd
