@@ -1,5 +1,5 @@
 [Unit]
-Description=Manage VNC Server on this droplet
+Description=Manage VNC Server
 
 [Service]
 Type=forking
