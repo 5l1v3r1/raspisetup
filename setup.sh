@@ -33,7 +33,7 @@ read -p "Devam etmek icin bir tusa basin"
 
 
 #------------------------------------------
-# Bluetooth Calistirmak Icin
+# Bluetooth ile SSH baglantisi Icin
 #git clone https://github.com/Re4son/re4son-kernel-builder.git
 #cd re4son-kernel-builder
 #./install.sh
