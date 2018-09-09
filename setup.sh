@@ -32,7 +32,13 @@ read -p "Devam etmek icin bir tusa basin"
 
 #------------------------------------------
 # Bluetooth ile SSH baglantisi icin AP kurulumu
-bash panfiles/bt-pan-ap-install
+if [ -f /usr/local/sbin/bt-pan ]; then
+        echo "Bluetooth PAN Yuklu!"
+fi
+read -p "Bluetooth PAN yuklensin mi? [E/h]" CEVAP
+if [[ "$CEVAP" == "E" || "$CEVAP" == "e" || "$CEVAP" == "" ]]; then
+        bash panfiles/bt-pan-ap-install
+fi
 
 
 #Servisleri yukle
@@ -79,3 +85,4 @@ fi
 
 
 cls
+cls -h
