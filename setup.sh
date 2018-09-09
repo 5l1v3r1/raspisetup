@@ -54,10 +54,10 @@ read -p "Devam etmek icin bir tusa basin"
 # scriptleri ayarlama
 cp wifi /usr/bin/wifi
 cp wifioff /usr/bin/wifioff
-cp yardim /usr/bin/yardim
+cp cls /usr/bin/cls
 chmod +x /usr/bin/wifi
 chmod +x /usr/bin/wifioff
-chmod +x /usr/bin/yardim
+chmod +x /usr/bin/cls
 echo "-------------------------------------"
 echo "Yardimci komutlar yuklendi"
 read -p "Devam etmek icin bir tusa basin"
@@ -78,4 +78,4 @@ if [[ "$CEVAP" == "E" || "$CEVAP" == "e" || "$CEVAP" == "" ]]; then
 fi
 
 
-yardim
+cls
