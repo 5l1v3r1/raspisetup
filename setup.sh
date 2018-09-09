@@ -64,6 +64,7 @@ cp cls /usr/bin/cls
 chmod +x /usr/bin/wifi
 chmod +x /usr/bin/wifioff
 chmod +x /usr/bin/cls
+echo "alias ls='ls --color'" >> /etc/profile
 echo "-------------------------------------"
 echo "Yardimci komutlar yuklendi"
 read -p "Devam etmek icin bir tusa basin"
