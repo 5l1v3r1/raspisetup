@@ -4,8 +4,8 @@ then echo "$(tput sgr 0 1)$(tput bold)$(tput setaf 3)Commands$(tput sgr0)
 $(tput setaf 3)
 Connect Wifi            -> wifi \"SSID\" \"Password\"
 Disconnect wifi         -> wifioff
-Run service             -> service [SERVIS] start|stop
-Start service on boot   -> systemctl enable|disable [SERVIS]
+Run service             -> service [SERVICE] start|stop
+Start service on boot   -> systemctl enable|disable [SERVICE]
 
 $(tput sgr 0 1)$(tput bold)$(tput setaf 3)Services$(tput sgr0)"
 
