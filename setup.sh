@@ -30,27 +30,12 @@ echo "Wifi otomatik baglanmak icin ayarlandi"
 read -p "Devam etmek icin bir tusa basin"
 
 
-
-
 #------------------------------------------
-# Bluetooth ile SSH baglantisi Icin
-#git clone https://github.com/Re4son/re4son-kernel-builder.git
-#cd re4son-kernel-builder
-#./install.sh
-
-# Bluetooth Uzerinden SSH Baglantisi Icin
-#nano /lib/systemd/system/bluetooth.service
-# Bul -> Değiştir
-# ExecStart=/usr/libexec/bluetooth/bluetoothd -C
-
-#### Deneme yap:
-# sed -i 's/original/new/g' /lib/systemd/system/bluetooth.service
-#-----------------------------------------------
+# Bluetooth ile SSH baglantisi icin AP kurulumu
+bash panfiles/bt-pan-ap-install
 
 
 #Servisleri yukle
-#cp bluetooth.service /etc/systemd/system/bluetooth.service
-#cp rfcomm.service /etc/systemd/system/rfcomm.service
 cp vncserver.service /etc/systemd/system/vncserver.service
 echo "-------------------------------------"
 echo "Servis ayar dosyalari yuklendi"
@@ -66,7 +51,7 @@ echo "-------------------------------------"
 echo "MOTD guncellendi"
 read -p "Devam etmek icin bir tusa basin"
 
-# scriptleri ayarlaa
+# scriptleri ayarlama
 cp wifi /usr/bin/wifi
 cp wifioff /usr/bin/wifioff
 cp yardim /usr/bin/yardim
@@ -88,7 +73,7 @@ if [[ "$CEVAP" == "E" || "$CEVAP" == "e" || "$CEVAP" == "" ]]; then
         screen -dmS guncelleme
         screen -S guncelleme -X stuff "apt-get -y update \napt-get -y upgrade \n"
         echo "-------------------------------------"
-        echo "Arkaplanda guncelleme yapiliyor"
+        echo "Arkaplanda guncelleme yapiliyor, kontrol etmeyi unutma"
         read -p "Devam etmek icin bir tusa basin"
 fi
 
