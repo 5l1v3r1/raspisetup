@@ -17,3 +17,6 @@ EN: Configuration script for speed things up on my own Raspberry Pi3 at first in
 
 # DNS Ekleme
     /etc/dhcp/dhclient.conf
+    
+# Sıcaklık
+    /opt/vc/bin/vcgencmd measure_temp | cut -c "6-9")ºC
