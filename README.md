@@ -35,6 +35,9 @@ EN: Configuration script for speed things up on my own Raspberry Pi3 at first in
     
     ---Educational---
     
+    hcxdumptool (https://github.com/ZerBea/hcxdumptool)
+    hcxtools (https://github.com/ZerBea/hcxtools)
+    hashcat (https://github.com/hashcat/hashcat)
     mitmap (https://github.com/xdavidhu/mitmAP)
     mitm-framework (https://github.com/jbarcia/MiTM-Framework)
     fluxion (https://github.com/FluxionNetwork/fluxion)
