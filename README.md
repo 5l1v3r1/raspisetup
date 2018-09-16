@@ -32,7 +32,9 @@ EN: Configuration script for speed things up on my own Raspberry Pi3 at first in
     create_ap (https://github.com/oblique/create_ap)
     sslstrip (https://github.com/LeonardoNve/sslstrip2)
     dns2proxy (https://github.com/LeonardoNve/dns2proxy)
+    
     ---Educational---
+    
     mitmap (https://github.com/xdavidhu/mitmAP)
     mitm-framework (https://github.com/jbarcia/MiTM-Framework)
     fluxion (https://github.com/FluxionNetwork/fluxion)
