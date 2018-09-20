@@ -51,7 +51,7 @@ read -p "Devam etmek icin bir tusa basin"
 # MOTD Degistirme
 sed -i "s/PrintLastLog yes/PrintLastLog no/g" /etc/ssh/sshd_config
 echo > /etc/motd
-mv motdpi /etc/motdpi
+cp motdpi /etc/motdpi
 echo "bash /etc/motdpi" >> /etc/profile
 echo "-------------------------------------"
 echo "MOTD guncellendi"
