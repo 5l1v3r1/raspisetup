@@ -11,4 +11,4 @@ echo "$(tput setaf 2)
    '~ .~~~. ~'
        '~'
 $(tput sgr0)"
-yardim
+cls
