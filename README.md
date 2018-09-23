@@ -37,7 +37,13 @@ EN: Configuration script for speed things up on my own Raspberry Pi3 at first in
     
     hcxdumptool (https://github.com/ZerBea/hcxdumptool)
     hcxtools (https://github.com/ZerBea/hcxtools)
+     ↳  apt-get install libcurl4-openssl-dev libssl-dev zlib1g-dev libpcap-dev
     hashcat (https://github.com/hashcat/hashcat)
+     ↳  git clone https://github.com/hashcat/hashcat.git
+     ↳  cd hashcat
+     ↳  git submodule update --init
+     ↳  make
+     ↳  make install
     mitmap (https://github.com/xdavidhu/mitmAP)
     mitm-framework (https://github.com/jbarcia/MiTM-Framework)
     fluxion (https://github.com/FluxionNetwork/fluxion)
