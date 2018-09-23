@@ -23,6 +23,7 @@ EN: Configuration script for speed things up on my own Raspberry Pi3 at first in
 
 # Yüklenecekler
     wifite2 (https://github.com/derv82/wifite2)
+     ↳ apt-get install tshark reaver bully cowpatty pyrit
     wifite1 (https://github.com/derv82/wifite)
     mitmf (https://github.com/byt3bl33d3r/MITMf)
     beef-xss (https://github.com/beefproject/beef)
