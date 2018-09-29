@@ -105,7 +105,17 @@ read -p "Devam etmek icin bir tusa basin"
 
 read -p "Bluetooth cihazi eklenecek mi? [E/h]" CEVAP
 if [[ "$CEVAP" == "E" || "$CEVAP" == "e" || "$CEVAP" == "" ]]; then
-        bluetoothctl
+        bluetoothctl agent on
+        bluetoothctl discoverable on
+        bluetoothctl pairable on
+        echo ""
+        echo "[!] Baglanmak istediginiz cihaz bulununca CTRL+C 'ye basin"
+        echo ""
+        bluetoothctl scan on
+        read -p "Bluetooth cihazi MAC adresi: " BTMAC
+        bluetoothctl info $BTMAC
+        bluetoothctl pair $BTMAC
+        bluetoothctl trust $BTMAC
 fi
 
 cls
