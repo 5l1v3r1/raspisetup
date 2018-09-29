@@ -9,10 +9,7 @@ EN: Configuration script for speed things up on my own Raspberry Pi3 at first in
 
     git clone https://github.com/muratcesmecioglu/raspisetup.git
     cd raspisetup
-    chmod +x expand-rootfs.sh
     chmod +x setup.sh
-    ./expand-rootfs.sh
-    reboot
     ./setup.sh
 
 # DNS Ekleme
@@ -23,7 +20,9 @@ EN: Configuration script for speed things up on my own Raspberry Pi3 at first in
 
 # Yüklenecekler
     wifite2 (https://github.com/derv82/wifite2)
-     ↳ apt-get install tshark reaver bully cowpatty pyrit
+    hcxdumptool (https://github.com/ZerBea/hcxdumptool)
+    hcxtools (https://github.com/ZerBea/hcxtools)
+    hashcat (https://github.com/hashcat/hashcat)
     wifite1 (https://github.com/derv82/wifite)
     mitmf (https://github.com/byt3bl33d3r/MITMf)
     beef-xss (https://github.com/beefproject/beef)
@@ -35,16 +34,6 @@ EN: Configuration script for speed things up on my own Raspberry Pi3 at first in
     dns2proxy (https://github.com/LeonardoNve/dns2proxy)
     
     ---Educational---
-    
-    hcxdumptool (https://github.com/ZerBea/hcxdumptool)
-    hcxtools (https://github.com/ZerBea/hcxtools)
-     ↳  apt-get install libcurl4-openssl-dev libssl-dev zlib1g-dev libpcap-dev
-    hashcat (https://github.com/hashcat/hashcat)
-     ↳  git clone https://github.com/hashcat/hashcat.git
-     ↳  cd hashcat
-     ↳  git submodule update --init
-     ↳  make
-     ↳  make install
     mitmap (https://github.com/xdavidhu/mitmAP)
     mitm-framework (https://github.com/jbarcia/MiTM-Framework)
     fluxion (https://github.com/FluxionNetwork/fluxion)
