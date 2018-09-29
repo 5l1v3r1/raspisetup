@@ -1,5 +1,14 @@
 #!/bin/bash
 #---Henuz Tamamlanmadi---
+
+read -p "[?] Kali-setup? [E/h]" CEVAP
+if [[ "$CEVAP" == "E" || "$CEVAP" == "e" || "$CEVAP" == "" ]]; then
+        bash kali-setup.sh
+fi
+
+#Baska yere koymayin
+cd /root/raspisetup
+
 #screen -dmS guncelleme
 #screen -S guncelleme -X stuff "apt-get -y install gparted tightvncserver \n"
 echo "-------------------------------------"
