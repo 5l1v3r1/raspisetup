@@ -5,8 +5,11 @@
 echo "-------------------------------------"
 echo "Ilk guncelleme ve programlar yukleniyor"
 echo "-------------------------------------"
-apt-get update
-apt-get -y install screen tightvncserver
+#apt-get update
+#apt-get -y install screen tightvncserver
+#
+#vncserver 2018.3 ile geliyor. screen yerine byobu kullanilacak. Oncesinde programlar yuklenecekse update yapilmis olacak, gerek yok.
+#
 echo "-------------------------------------"
 echo "Programlar yuklendi"
 read -p "Devam etmek icin bir tusa basin"
@@ -71,19 +74,28 @@ read -p "Devam etmek icin bir tusa basin"
 
 #Servis ayarlarini yap
 #systemctl disable ligthdm
+systemctl enable bluetooth
+systemctl enable pan
 echo "-------------------------------------"
 echo "Servis ayarlari yapildi"
 read -p "Devam etmek icin bir tusa basin"
 
-read -p "Arkaplanda guncelleme yapilsin mi? [E/h]" CEVAP
-if [[ "$CEVAP" == "E" || "$CEVAP" == "e" || "$CEVAP" == "" ]]; then
-        screen -dmS guncelleme
-        screen -S guncelleme -X stuff "apt-get -y update \napt-get -y upgrade \n"
-        echo "-------------------------------------"
-        echo "Arkaplanda guncelleme yapiliyor, kontrol etmeyi unutma"
-        read -p "Devam etmek icin bir tusa basin"
-fi
+#Upgrade yapmamak daha mantikli sanki (2018.3)
+#read -p "Arkaplanda guncelleme yapilsin mi? [E/h]" CEVAP
+#if [[ "$CEVAP" == "E" || "$CEVAP" == "e" || "$CEVAP" == "" ]]; then
+        #screen -dmS guncelleme
+        #screen -S guncelleme -X stuff "apt-get -y update \napt-get -y upgrade \n"
+        #echo "-------------------------------------"
+        #echo "Arkaplanda guncelleme yapiliyor, kontrol etmeyi unutma"
+        #read -p "Devam etmek icin bir tusa basin"
+#fi
 
+read -p "Bluetooth cihazi eklenecek mi? [E/h]" CEVAP
+if [[ "$CEVAP" == "E" || "$CEVAP" == "e" || "$CEVAP" == "" ]]; then
+        bluetoothctl
+fi
 
 cls
 cls -h
+
+
