@@ -64,9 +64,11 @@ read -p "Devam etmek icin bir tusa basin"
 cp wifi /usr/bin/wifi
 cp wifioff /usr/bin/wifioff
 cp cls /usr/bin/cls
+cp raspi-ip /usr/bin/raspi-ip
 chmod +x /usr/bin/wifi
 chmod +x /usr/bin/wifioff
 chmod +x /usr/bin/cls
+chmod +x /usr/bin/raspi-ip
 echo "alias ls='ls --color'" >> /etc/profile
 echo "-------------------------------------"
 echo "Yardimci komutlar yuklendi"
