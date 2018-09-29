@@ -1,0 +1,2 @@
+#!/bin/bash
+grep -q ' ip\=' /boot/cmdline.txt && sed -i "s/\sip\=$(awk -Fip= '{ print $2 }' /boot/cmdline.txt)//" /boot/cmdline.txt || sed -i "s/$/ ip\=$1/" /boot/cmdline.txt
