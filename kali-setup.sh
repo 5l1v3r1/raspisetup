@@ -12,6 +12,8 @@ X-GNOME-Gettext-Domain=byobu
 " >> /usr/share/applications/byobu.desktop
 chmod 666 /usr/share/applications/byobu.desktop
 
+cd /root
+
 read -p "[?] Update and install apt? [E/h]" CEVAP
 if [[ "$CEVAP" == "E" || "$CEVAP" == "e" || "$CEVAP" == "" ]]; then
   apt-get update
