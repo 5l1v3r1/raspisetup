@@ -1,9 +1,9 @@
 # --- Bu proje henüz deneme aşamasındadır! ---
+# --- Highly Experimental ---
 
 # raspisetup
-TR: Raspberry Pi3 için ilk kurulum işlemlerini hızlandırma scripti.
-
-EN: Configuration script for speed things up on my own Raspberry Pi3 at first install.
+TR: Raspberry Pi3 için ilk kurulum işlemlerini hızlandırma scripti. Sadece Kali 2018.3-nexmon içindir.
+EN: Configuration script for speed things up on my own Raspberry Pi3 at first install on Kali 2018.03-nexmon.
 
 # Installation
 
