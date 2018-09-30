@@ -2,8 +2,9 @@
 if [ "$1" == "" ];
 then echo "$(tput sgr 0 1)$(tput bold)$(tput setaf 3)Commands$(tput sgr0)
 $(tput setaf 3)
-Connect Wifi            -> wifi \"SSID\" \"Password\"
+Connect wifi            -> wifi \"SSID\" \"Password\"
 Disconnect wifi         -> wifioff
+Scan wifi               -> wifiscan
 Run service             -> service [SERVICE] start|stop
 Start service on boot   -> systemctl enable|disable [SERVICE]
 Set|Remove boot IP      -> raspi-ip [IP]
