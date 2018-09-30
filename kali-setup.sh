@@ -17,7 +17,7 @@ cd /root
 read -p "[?] Update and install apt? [E/h]" CEVAP
 if [[ "$CEVAP" == "E" || "$CEVAP" == "e" || "$CEVAP" == "" ]]; then
   apt-get update
-  apt-get -y install libcurl4-openssl-dev libssl-dev zlib1g-dev libpcap-dev tshark reaver bully cowpatty pyrit python-dev python-setuptools libpcap0.8-dev libnetfilter-queue-dev libssl-dev libjpeg-dev libxml2-dev libxslt1-dev libcapstone3 libcapstone-dev libffi-dev file mc htop macchanger byobu
+  apt-get -y install libcurl4-openssl-dev libssl-dev zlib1g-dev libpcap-dev tshark reaver bully cowpatty pyrit python-dev python-setuptools libpcap0.8-dev libnetfilter-queue-dev libssl-dev libjpeg-dev libxml2-dev libxslt1-dev libcapstone3 libcapstone-dev libffi-dev file mc htop macchanger byobu sipcalc nmap lynx
 fi
 
 read -p "[?] Download gits? [E/h]" CEVAP
@@ -28,6 +28,12 @@ if [[ "$CEVAP" == "E" || "$CEVAP" == "e" || "$CEVAP" == "" ]]; then
   git clone https://github.com/derv82/wifite2.git
   git clone https://github.com/byt3bl33d3r/MITMf
   git clone https://github.com/bettercap/caplets.git
+  git clone https://github.com/singe/sslstrip2.git
+  git clone https://github.com/singe/dns2proxy.git
+  pip install pcapy
+  git clone https://github.com/systematicat/hack-captive-portals.git
+  git clone https://github.com/DanMcInerney/wifijammer.git
+  git clone https://github.com/DanMcInerney/cookiejack.git
 fi
 
 read -p "--- Yukleme hcxdumptool"
@@ -77,13 +83,23 @@ read -p "--- Yukleme bettercap2"
 wget https://github.com$(curl -s $(curl -s https://github.com/bettercap/bettercap/releases/latest | awk -F\" '{ print $2 }') | grep -m 1 "bettercap_linux_arm7" |  awk -F\" '{ print $2 }')
 unzip bettercap_linux_arm7_*
 ln -s /lib/ld-linux-armhf.so.3 /lib/ld-linux.so.3
-mv bettercap /usr/local/bin/bettercap
+mv bettercap /usr/local/bin/bettercap2
 rm README.md LICENSE.md bettercap_linux_arm7_2.9.zip
 
 read -p "--- Yukleme bettercap2 caplets"
 cd caplets/
 make install
 cd /root
+
+read -p "--- Yukleme bettercap1"
+wget https://github.com/evilsocket/bettercap/archive/v1.6.2.zip -O bcap1.zip
+unzip bcap1.zip
+cd bettercap-1.6.2/
+gem build bettercap.gemspec
+gem install bettercap*.gem
+cd /root
+rm -rf bettercap-1.6.2/
+rm bcap1.zip
 
 read -p "--- Yukleme beef-xss"
 apt-get -y install beef-xss
