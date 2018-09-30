@@ -84,7 +84,10 @@ echo "Yardimci komutlar yuklendi"
 read -p "Devam etmek icin bir tusa basin"
 
 #Servis ayarlarini yap
-#systemctl disable ligthdm
+
+#RAMden tasarruf, vnc ile acilir
+systemctl disable ligthdm
+
 systemctl enable bluetooth
 systemctl start bluetooth
 systemctl enable pan
