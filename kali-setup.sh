@@ -1,17 +1,4 @@
 #!/bin/bash
-#Once gerekliler
-echo "[Desktop Entry]
-Name=Byobu Terminal
-Comment=Advanced Command Line and Text Window Manager
-Icon=byobu
-Exec=byobu-launcher
-Type=Application
-Terminal=true
-Categories=GNOME;GTK;Utility;
-X-GNOME-Gettext-Domain=byobu
-" >> /usr/share/applications/byobu.desktop
-chmod 666 /usr/share/applications/byobu.desktop
-
 cd /root
 
 read -p "[?] Update and install apt? [E/h]" CEVAP
@@ -100,6 +87,18 @@ gem install bettercap*.gem
 cd /root
 rm -rf bettercap-1.6.2/
 rm bcap1.zip
+
+echo "[Desktop Entry]
+Name=Byobu Terminal
+Comment=Advanced Command Line and Text Window Manager
+Icon=byobu
+Exec=byobu-launcher
+Type=Application
+Terminal=true
+Categories=GNOME;GTK;Utility;
+X-GNOME-Gettext-Domain=byobu
+" >> /usr/share/applications/byobu.desktop
+chmod 666 /usr/share/applications/byobu.desktop
 
 read -p "--- Yukleme beef-xss"
 apt-get -y install beef-xss
