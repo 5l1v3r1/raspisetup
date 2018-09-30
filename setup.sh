@@ -85,8 +85,8 @@ read -p "Devam etmek icin bir tusa basin"
 #Servis ayarlarini yap
 
 #RAMden tasarruf, vnc ile acilir
-systemctl disable ligthdm
-
+systemctl disable lightdm
+systemctl stop lightdm
 systemctl enable bluetooth
 systemctl start bluetooth
 systemctl enable pan
