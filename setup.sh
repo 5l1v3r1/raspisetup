@@ -70,10 +70,12 @@ read -p "Devam etmek icin bir tusa basin"
 
 # scriptleri ayarlama
 cp wifi /usr/bin/wifi
+cp wifi /usr/bin/wifiscan
 cp wifioff /usr/bin/wifioff
 cp cls /usr/bin/cls
 cp raspi-ip /usr/bin/raspi-ip
 chmod +x /usr/bin/wifi
+chmod +x /usr/bin/wifiscan
 chmod +x /usr/bin/wifioff
 chmod +x /usr/bin/cls
 chmod +x /usr/bin/raspi-ip
