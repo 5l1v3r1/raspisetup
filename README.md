@@ -33,6 +33,26 @@ EN: Configuration script for speed things up on my own Raspberry Pi3 at first in
     sslstrip (https://github.com/LeonardoNve/sslstrip2)
     dns2proxy (https://github.com/LeonardoNve/dns2proxy)
     
+    ---Default Gelen---
+    nmap
+    ncat
+    metasploit
+    sqlmap
+    wpscan
+    john the ripper
+    medusa
+    ncrack
+    pyrit
+    hydra
+    bully
+    cowpatty
+    reaver
+    pixiewps
+    aircrack-ng
+    macchanger
+    firefox
+    
+    
     ---Educational---
     mitmap (https://github.com/xdavidhu/mitmAP)
     mitm-framework (https://github.com/jbarcia/MiTM-Framework)
