@@ -61,6 +61,7 @@ read -p "--- Yukleme mitmf"
 #mitmf baslangic
 pip install virtualenvwrapper
 echo "source /usr/local/bin/virtualenvwrapper.sh" >> /etc/bash.bashrc
+source /usr/local/bin/virtualenvwrapper.sh
 mkvirtualenv MITMf -p /usr/bin/python2.7
 cd /root/MITMf && git submodule init && git submodule update --recursive
 pip install -r requirements.txt
