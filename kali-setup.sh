@@ -66,12 +66,15 @@ cd /root/MITMf && git submodule init && git submodule update --recursive
 pip install -r requirements.txt
 cd /root
 
+read -p "--- Yukleme beef-xss"
+apt-get -y install beef-xss
+
 read -p "--- Yukleme bettercap2"
 wget https://github.com$(curl -s $(curl -s https://github.com/bettercap/bettercap/releases/latest | awk -F\" '{ print $2 }') | grep -m 1 "bettercap_linux_arm7" |  awk -F\" '{ print $2 }')
 unzip bettercap_linux_arm7_*
 ln -s /lib/ld-linux-armhf.so.3 /lib/ld-linux.so.3
 mv bettercap /usr/local/bin/bettercap2
-rm README.md LICENSE.md bettercap_linux_arm7_2.9.zip
+rm README.md LICENSE.md bettercap_linux_arm7_*.zip
 
 read -p "--- Yukleme bettercap2 caplets"
 cd caplets/
@@ -100,5 +103,4 @@ X-GNOME-Gettext-Domain=byobu
 " >> /usr/share/applications/byobu.desktop
 chmod 666 /usr/share/applications/byobu.desktop
 
-read -p "--- Yukleme beef-xss"
-apt-get -y install beef-xss
+
