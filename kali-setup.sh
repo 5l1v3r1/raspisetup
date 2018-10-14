@@ -4,7 +4,7 @@ cd /root
 read -p "[?] Update and install apt? [E/h]" CEVAP
 if [[ "$CEVAP" == "E" || "$CEVAP" == "e" || "$CEVAP" == "" ]]; then
   apt-get update
-  apt-get -y install libcurl4-openssl-dev libssl-dev zlib1g-dev libpcap-dev tshark reaver bully cowpatty pyrit python-dev python-setuptools libpcap0.8-dev libnetfilter-queue-dev libssl-dev libjpeg-dev libxml2-dev libxslt1-dev libcapstone3 libcapstone-dev libffi-dev file mc htop macchanger byobu sipcalc nmap lynx build-essentials
+  apt-get -y install libcurl4-openssl-dev libssl-dev zlib1g-dev libpcap-dev tshark reaver bully cowpatty pyrit python python-dev python-setuptools libpcap0.8-dev libnetfilter-queue-dev libssl-dev libjpeg-dev libxml2-dev libxslt1-dev libcapstone3 libcapstone-dev libffi-dev file mc htop macchanger byobu sipcalc nmap lynx build-essential
 fi
 
 read -p "[?] Download gits? [E/h]" CEVAP
