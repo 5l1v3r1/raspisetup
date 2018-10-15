@@ -4,7 +4,7 @@ cd /root
 read -p "[?] Update and install apt? [E/h]" CEVAP
 if [[ "$CEVAP" == "E" || "$CEVAP" == "e" || "$CEVAP" == "" ]]; then
   apt-get update
-  apt-get -y install libcurl4-openssl-dev libssl-dev zlib1g-dev libpcap-dev tshark reaver bully cowpatty pyrit python python2.7-dev python-dev python-setuptools libpcap0.8-dev libnetfilter-queue-dev libssl-dev libjpeg-dev libxml2-dev libxslt1-dev libcapstone3 libcapstone-dev libffi-dev file mc htop macchanger byobu sipcalc nmap lynx build-essential
+  apt-get -y install libcurl4-openssl-dev libssl-dev zlib1g-dev libpcap-dev tshark reaver bully cowpatty pyrit python python-pcapy python-dev python-setuptools libpcap0.8-dev libnetfilter-queue-dev libssl-dev libjpeg-dev libxml2-dev libxslt1-dev libcapstone3 libcapstone-dev libffi-dev file mc htop macchanger byobu sipcalc nmap lynx build-essential
 fi
 
 read -p "[?] Download gits? [E/h]" CEVAP
@@ -17,7 +17,6 @@ if [[ "$CEVAP" == "E" || "$CEVAP" == "e" || "$CEVAP" == "" ]]; then
   git clone https://github.com/bettercap/caplets.git
   git clone https://github.com/singe/sslstrip2.git
   git clone https://github.com/singe/dns2proxy.git
-  pip install pcapy
   git clone https://github.com/systematicat/hack-captive-portals.git
   git clone https://github.com/DanMcInerney/wifijammer.git
   git clone https://github.com/DanMcInerney/cookiejack.git
